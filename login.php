@@ -151,7 +151,7 @@ if ($erlist) {
     <input type="password" name="repass" placeholder="Retype password"><br/>
     <select id="acctype" name="type">
       <option value="mn">Event Manager</option>
-      <option value="be">Blog Editor</option>
+      <option value="mk">Marketing Team</option>
       <option value="pr">Proofreader</option>
     </select><br/>
     <div id="mn_opts">

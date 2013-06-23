@@ -6,9 +6,9 @@ if (isset($_SESSION['type'])) {
     case 'MN':
     header("Location: $mn_page");
     _exit();
-    case 'BE':
-     $organiser = $be_page;
-    header("Location: $be_page");
+    case 'MK':
+     $organiser = $mk_page;
+    header("Location: $mk_page");
     _exit();
     case 'PR':
     header("Location: $pr_page");
@@ -39,10 +39,10 @@ if (isset($_POST["signup"])) {
       $mysqli->query("DELETE FROM managers WHERE username='$_POST[uname]'");
     }
   }
-  if ($_POST["type"] == "be") {
+  if ($_POST["type"] == "mk") {
 
-    if (TRUE === $mysqli->query("INSERT INTO managers values ('-be', '$_POST[uname]', '$_POST[pass]', 0)")) {
-      $msg = "<span class='color'>Blog Editor signup was successful!</span> ";
+    if (TRUE === $mysqli->query("INSERT INTO managers values ('-mk', '$_POST[uname]', '$_POST[pass]', 0)")) {
+      $msg = "<span class='color'>Marketing Team member signup was successful!</span> ";
       $s = 1;
     }
   } else if (TRUE === $mysqli->query("INSERT INTO managers values ('-pr', '$_POST[uname]', '$_POST[pass]', 0)")) {
@@ -97,11 +97,6 @@ if (isset($_POST["signup"])) {
       }if ($row['eventcode'] == '-mk') {
         $_SESSION['type'] = 'MK';
       header("Location: home.php");
-
-      }if ($row['eventcode'] == '-be') {
-        $_SESSION['type'] = 'BE';
-      header("Location: home.php");
-
       } 
       else {
         $_SESSION['type'] = 'MN';
