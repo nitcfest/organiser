@@ -1,0 +1,92 @@
+body
+ {
+  margin:auto;
+ }
+#left
+ {
+  background-color:#5555DD;
+  border-right:grey solid 1px;
+  float:left;
+  border-right:3px solid brown;
+  width:10%;
+  height:90%;
+  text-align:center;
+ }
+#header13
+ {
+ 	height:10%;
+width:100%;
+padding-bottom: 15px;
+border-bottom: 3px solid brown;
+background-color:#CCCCEE;
+ }
+#orglogo
+ {
+ 		float:left; 
+	margin-left:10px; 
+	margin-top:5px; 
+	border-left: 3px solid #444444; 
+	border-bottom: 3px solid #444444;
+ }
+.head-left
+ {
+ 	float:left;
+	font-size:400%;
+	display: inline;
+	margin-left: 10px;
+ }
+.head-link
+ {
+ 	color:#5555DD;
+ }
+.head-right
+ {
+ 	float:right;
+	margin-right: 10px;
+    font-size:100%;
+    display: inline;
+    padding-top: 30px;
+ }
+
+/**********************************Terminal***********************************/
+body
+{
+    background-color:#F4F4FF;
+}
+
+.overflow
+{
+    height:120px;
+    width:320px;
+    overflow:auto;
+    resize: both;
+    background-color: #F8F8FC;
+    margin: 3px;
+    border: 1px solid #88B;
+    border-radius: 3px;
+}
+table {
+    border-spacing: 0;
+    border: 0;
+    margin:auto;
+}
+th {
+    padding: 5px 15px 5px 0px;
+    text-align: left;
+    border: 0;
+    border-bottom: 1px solid #889;
+    background-color: #E9E9FF;
+}
+td {
+    padding-right: 15px;
+    border: 0;
+    border-bottom: 1px solid #99A;
+}
+td:nth-child(6) {
+    max-width: 240px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+tr:hover {
+    background-color: #EFEFFF;
+}
