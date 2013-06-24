@@ -1,6 +1,7 @@
 body
  {
   margin:auto;
+  font-family:Gill Sans MT;
  }
 #left
  {
@@ -68,7 +69,7 @@ body
 table {
     border-spacing: 0;
     border: 0;
-    margin:auto;
+    font-size:80%;
 }
 th {
     padding: 5px 15px 5px 0px;
@@ -90,3 +91,12 @@ td:nth-child(6) {
 tr:hover {
     background-color: #EFEFFF;
 }
+thead
+ {
+  margin:auto;
+ }
+span
+ {
+  margin:auto;
+  text-align: center;
+ }

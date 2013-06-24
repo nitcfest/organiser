@@ -8,7 +8,6 @@
 <body>
 	<?php include('font.php');?>
 	<?php include('header.php');?>
-	<?php include('left.php');?>
 	<div id="main">
 		Welcome to Tathva Organiser!
 	</div>
