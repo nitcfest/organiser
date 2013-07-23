@@ -28,7 +28,7 @@ if ($u && $a) {
 }
 if ($query) {
     if ($mysqli->query($query))
-	echo "Success!";
+	header('Location:terminal.php');
     else
 	echo "Failed! Please contact an administrator!";
 } else
