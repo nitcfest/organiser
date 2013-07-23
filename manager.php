@@ -207,7 +207,6 @@ $(document).ready(function () {
 });
   //-->
   </script>
-  <?php include("font.php");?>
 </head>
 
 <body>

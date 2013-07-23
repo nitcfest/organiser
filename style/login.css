@@ -1,0 +1,71 @@
+body {
+	background-image:url("../tathva.jpg");
+	background-size:100%;
+}
+#wrapper {
+	display: none;
+	width: 100%;
+	in-width: 1024px;
+	margin: auto;
+	text-align: center;
+}
+#sinwrap, #supwrap {
+	padding: 10px;
+	border: 1px solid blue;
+	border-radius: 3px;
+	background-color: rgba(0,0,0,0.5);
+	color:white;
+	margin: 10px;
+	font-family:Tathva_Cafe;
+	font-size:80%;
+}
+#supwrap {
+	position:absolute;
+	top:45%;
+	right:15%;
+}
+#sinwrap {
+	position:absolute;
+	top:20%;
+	right:100px;
+	width:30%;
+}
+#sinwrap h3, #supwrap h3 {
+	margin: 0 0 5px;
+}
+input[type=password], input[type=text] {
+	width: 180px;
+}
+.color
+{
+	color:white;
+	font-weight:bold;
+}
+#erlist {
+	position: absolute;
+	background: rgba(240,240,240,0.8);
+	z-index: 99;
+}
+#info
+{
+	width:50%;
+	height: 50%;
+	margin-left: 5%;
+	margin-top: 10%;
+	position:absolute;
+}
+ul
+{
+	color: white;
+	text-align:left;
+	font-family: Gill Sans MT;
+}
+li
+{
+	margin-bottom: 5%;
+}
+h4
+ {
+ 	color:#9999FF;
+ 	margin-bottom: 2%;
+ }

@@ -1,0 +1,4 @@
+Security levels
+	0 = admin level
+	1 = new users
+	2 = validated users
