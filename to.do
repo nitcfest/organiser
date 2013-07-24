@@ -6,7 +6,7 @@ CMS
 	general
 		1. add account name in header
 		2. add roll number and other credentials for users
-		3. 
+		3. multiple priveleges for users
 
 	admin account
 		1. add warning before deleting account

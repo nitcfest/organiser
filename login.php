@@ -42,7 +42,7 @@
   </div>
 
   <div id="sinwrap">
-  <form action="signup.php" method="post" id="sinform">
+  <form action="signin.php" method="post" id="sinform">
     <h3>Login</h3>
     <input type="text" placeholder="Username" name="username"><br/>
     <input type="password" placeholder="Password" name="password"><br/>

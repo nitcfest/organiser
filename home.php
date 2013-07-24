@@ -12,15 +12,13 @@ require_once("initdb.php");?>
 	<?php include('header.php');?>
 	<div id="main">
 		<div id="instructions">
-			<ul>
-			<b><u>Web Admins</u></b>
-				<li><b>Validation:</b>Nithin Mohan - 7293333314</li>
-				<li><b>Validation:</b>Tarun Uday - 9633258889</li>
-			</ul>
+			<h4>About Organiser - Tathva CMS</h4>
+			Tathva Content Management System (CMS) is a platform for organisers to contribute to certain aspects of Tathva's management, with a lot of emphasis on the content put up in the official website. 
+			<?php echo $_SERVER['REMOTE_ADDR'];?>
 		</div>
 		<div id="showmark">
 			<?php include('modules/table-marketing.php');?>		 
-		</div>
+		</div> 
 		<div id="addmark">
 			<?php include('modules/form-marketing.php');?>		 
 		</div>

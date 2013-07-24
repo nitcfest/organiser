@@ -1,6 +1,14 @@
+<?php
+$user=$_SESSION['uname'];
+if (isset($_POST["submit"])) 
+{
+  $in="INSERT INTO  `marketing_contacts` (tel ,tel2 , offer, cmpname ,contactper , status, email, notes, submitted_by) VALUES ('$_POST[tel]',  '$_POST[tel2]', '$_POST[offer]',  '$_POST[cmpname]',  '$_POST[contactper]',  'Check',  '$_POST[email]', '$_POST[notes]', '$_SESSION[uname]');";
+  $mysqli->query($in) or die($mysqli->error);
+}
+?>
 <table class=\"well form-inline\" summary="" >
   <h4>Add contact</h4>
-  <form  method="post" action="marketing.php">
+  <form  method="post" action="home.php">
     <tr>
       <td><label  for="cmpname"> Name of the Company  </label></td>
       <td><input type="text" name="cmpname" placeholder="Eg. Bajaj Industries, Calicut" value="" autofocus="autofocus" /></td>     

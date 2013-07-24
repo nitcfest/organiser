@@ -1,2 +1,3 @@
-<?php include('signup.php'); ?>
-<?php include($organiser); ?>
+<?php 
+include ("initdb.php");
+_exit("Error: missing organiser page"); ?>
