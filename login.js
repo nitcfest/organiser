@@ -38,12 +38,13 @@ function validatesin() {
 }
 
 $(document).ready(function() {
+	$("#mn_opts").hide();
   $("#acctype").change(function() {
   var c=$(this).val();
   if(c=="mn")
-	$("#mn_opts").show();
+  $("#mn_opts").show();
   else
-	$("#mn_opts").hide();
+  $("#mn_opts").hide();
   });
   $("#supform").submit(validatesup);
   $("#sinform").submit(validatesin);

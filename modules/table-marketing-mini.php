@@ -1,6 +1,6 @@
 <h4>Marketing Contacts</h4>
 <?php
-if(!isset($level)||$level==1)
+if(isset($_SESSION['uname']))
 {
   $query="SELECT cmpname,status FROM marketing_contacts";
   $result=$mysqli->query($query);

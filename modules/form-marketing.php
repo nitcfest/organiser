@@ -7,7 +7,6 @@ if (isset($_POST["submit"]))
 }
 ?>
 <table class=\"well form-inline\" summary="" >
-  <h4>Add contact</h4>
   <form  method="post" action="home.php">
     <tr>
       <td><label  for="cmpname"> Name of the Company  </label></td>

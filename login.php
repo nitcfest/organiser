@@ -1,3 +1,5 @@
+<?php
+require_once("initdb.php");?>
 <html>
 <head>
   <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
@@ -24,7 +26,7 @@
         <ul>
           <li><h4>Join as Regular User</h4>Help us by adding your marketing contacts</li>
           <li><h4>Join as Marketing Manager</h4>Access marketing contacts added by regular users</li>
-          <li><h4>Join as Event Manager - Coming Soon</h4>Add content about your event to be put on tathva.org</li>
+          <li><h4>Join as Event Manager</h4>Add content about your event to be put on tathva.org</li>
         </ul>
       </p>
     </div>
@@ -32,12 +34,39 @@
   <form action="signup.php" method="post" id="supform">
     <h3>Not yet a member?</h3>
     <input type="text" name="uname" placeholder="Username"><br/>
+    <input type="text" name="roll" placeholder="Roll"><br/>
     <input type="password" name="pass" placeholder="Password"><br/>
     <input type="password" name="repass" placeholder="Retype password"><br/>
     <select id="acctype" name="type">
       <option value="nu">Regular User</option>
       <option value="mk">Marketing Manager</option>
-    <input type="submit" name="signup" value="Sign Up">
+      <option value="pr">Proofreader</option>
+      <option value="mn">Event Manager</option>
+      <div id="mn_opts">
+        <select name="category">
+          <option value="">--Event Category--</option>
+          <?php
+          $res1 = $mysqli->query("select cat_id, name from event_cats where par_cat=-1");
+          while($row=$res1->fetch_assoc()) {
+            $res2 = $mysqli->query("select cat_id, name from event_cats where par_cat=$row[cat_id]");
+            if ($res2->num_rows == 0)
+              echo "<option value='$row[cat_id]'>$row[name]</option>";
+            else {
+              echo "<optgroup label='$row[name]'>";
+              while ($erow=$res2->fetch_assoc())
+                echo "<option value='$erow[cat_id]'>$erow[name]</option>";
+              echo "</optgroup>";
+            }
+            $res2->free();
+          }
+          $res1->free();
+          ?>
+        <input type="text" placeholder="Event Name" name="ename"><br/>
+        <input type="text" placeholder="Event Code (3 letters)" name="ecode" onchange="javascript:this.value=this.value.toUpperCase();"><br/>
+        </select><br/>
+      </div>
+    </select>
+    </br><input type="submit" name="signup" value="Sign Up">
   </form>
   </div>
 

@@ -1,32 +1,7 @@
 <?php
 require_once("initdb.php");
-if (isset($_SESSION['type'])) 
-{
-  switch ($_SESSION['type']) 
-  {
-    case 'MN':
-    $level=2;
-    case 'MK':
-    $level=0;
-    case 'PR':
-    $level=2;
-    case 'AD':
-    $level=0;
-    case 'ML':
-    $level=2;
-    case 'CL':
-    $level=2;
-    case 'PL':
-    $level=2;
-    case 'NU':
-    $level=1;
-  }
-    echo $level;
-    _exit();
-} else
-{
+if ($_SESSION['type'] != "MK")
   _exit("You do not have access to this page");
-}
 $user=$_SESSION['uname'];
 if (isset($_POST["submit"])) 
 {
@@ -47,10 +22,10 @@ if (isset($_POST["submit"]))
   <?php include('header.php');?>
   <div id="main">
     <div id="show">
-      <?php include('modules/table-marketing');?>
+      <?php include('modules/table-marketing.php');?>
     </div>
     <div id="add">
-      <?php include('modules/form-marketing');?>
+      <?php include('modules/form-marketing.php');?>
     </div>
   </div>
   <?php include('footer.php');?>

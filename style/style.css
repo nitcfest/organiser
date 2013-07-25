@@ -1,21 +1,13 @@
 body
  {
+    background-color:#F4F4FF;
   margin:auto;
   font-family:Gill Sans MT;
  }
-#left
- {
-  background-color:#5555DD;
-  border-right:grey solid 1px;
-  float:left;
-  border-right:3px solid brown;
-  width:10%;
-  height:90%;
-  text-align:center;
- }
+ /*Header*/
 #header13
  {
- 	height:10%;
+  height:10%;
 width:100%;
 padding-bottom: 15px;
 border-bottom: 3px solid brown;
@@ -23,27 +15,27 @@ background-color:#CCCCEE;
  }
 #orglogo
  {
- 		float:left; 
-	margin-left:10px; 
-	margin-top:5px; 
-	border-left: 3px solid #444444; 
-	border-bottom: 3px solid #444444;
+    float:left; 
+  margin-left:10px; 
+  margin-top:5px; 
+  border-left: 3px solid #444444; 
+  border-bottom: 3px solid #444444;
  }
 .head-left
  {
- 	float:left;
-	font-size:400%;
-	display: inline;
-	margin-left: 10px;
+  float:left;
+  font-size:400%;
+  display: inline;
+  margin-left: 10px;
  }
 .head-link
  {
- 	color:#5555DD;
+  color:#5555DD;
  }
 .head-right
  {
- 	float:right;
-	margin-right: 10px;
+  float:right;
+  margin-right: 10px;
     font-size:100%;
     display: inline;
     padding-top: 30px;
@@ -52,7 +44,6 @@ background-color:#CCCCEE;
 /**********************************Terminal***********************************/
 body
 {
-    background-color:#F4F4FF;
 }
 
 .overflow
@@ -132,12 +123,35 @@ h4
   }
 .headlink
  {
-  float:right;
-  margin-right: 10px;
+    float:right;
+    margin-right: 10px;
     font-size:100%;
     display: inline;
     padding-top: 30px;
   }
+.headbox
+ {
+  float:right;
+  margin-right: 10px;
+  font-size:100%;
+  display: inline;
+  background-color: #5555DD;
+  color:black;
+  height:100px;
+  width:10%;
+ }
+.headbox>div
+ {
+  padding-top: 15px;
+  text-align: center;
+ }
+ .headbox>div>a
+ {
+  font-family: Arial;
+  font-weight: bold;
+  color:black;
+ }
+
 a
  {
   color:#5555DD;

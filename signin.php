@@ -8,7 +8,8 @@ if (isset($_SESSION['type']))
 }
 else 
 {
-	if (isset($_POST["signin"])) {
+	if (isset($_POST["signin"])) 
+	{
 		$user = $mysqli->real_escape_string($_POST['username']);
 		$pass = $mysqli->real_escape_string($_POST['password']);
 		if ($user == $u_ad && $pass == $p_ad) 
@@ -50,22 +51,24 @@ else
 				$erlist = $row['eventcode'];
 				if ($erlist == '-pr') $erlist = '';
 			} 
-			else {
+			else 
+			{
 				$_SESSION['uname'] = $user;
 				if ($row['eventcode'] == '-pr') 
 				{
 					$_SESSION['type'] = 'PR';
 					$_SESSION['page']=$pr_page;
-				} if ($row['eventcode'] == '-mk') 
+				} else if ($row['eventcode'] == '-mk') 
 				{
 					$_SESSION['type'] = 'MK';
 					$_SESSION['page']=$mk_page;
-				} if ($row['eventcode'] == '-nu') 
+				} else if ($row['eventcode'] == '-nu') 
 				{
 					$_SESSION['type'] = 'NU';
 					$_SESSION['page']=$nu_page;
 				} 
-				else {
+				else 
+				{
 					$_SESSION['type'] = 'MN';
 					$_SESSION['ecode'] = $row['eventcode'];
 					$_SESSION['page']=$mn_page;

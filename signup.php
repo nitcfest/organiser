@@ -6,11 +6,10 @@ if (isset($_SESSION['type']))
   header("Location:$_SESSION[page]");
   _exit();
 }
-$erlist = "";
 if (isset($_POST["signup"])) {
   $s = 0;
   if ($_POST["type"] == "mn") {
-    if (TRUE === $mysqli->query("INSERT INTO `users` VALUES ('$_POST[ecode]', '$_POST[uname]', '$_POST[pass]', 0)")) {
+    if (TRUE === $mysqli->query("INSERT INTO `users` VALUES ('$_POST[ecode]', '$_POST[uname]', '$_POST[pass]', 0, '$_POST[roll]')")) {
       if (TRUE === $mysqli->query("INSERT INTO `events`(`code`, `name`, `cat_id`) VALUES ('$_POST[ecode]', '".str_replace("'","&#39;",$_POST['ename'])."', '$_POST[category]')")) {
         $msg = "<span class='color'>Manager signup was successful!</span> ";
         $s = 1;
@@ -19,20 +18,17 @@ if (isset($_POST["signup"])) {
     }
   } else if ($_POST["type"] == "mk") {
 
-    if (TRUE === $mysqli->query("INSERT INTO users values ('-mk', '$_POST[uname]', '$_POST[pass]', 0)")) {
-      $msg = "<span class='color'>Marketing Team member signup was successful!</span> ";
+    if (TRUE === $mysqli->query("INSERT INTO users values ('-mk', '$_POST[uname]', '$_POST[pass]', 0, '$_POST[roll]')")) {
       $s = 1;
     }
   } else if ($_POST["type"] == "nu") {
 
-    if (TRUE === $mysqli->query("INSERT INTO users values ('-nu', '$_POST[uname]', '$_POST[pass]', 9)")) {
-      $msg = "<span class='color'>Tathva Team member signup was successful!</span> ";
+    if (TRUE === $mysqli->query("INSERT INTO users values ('-nu', '$_POST[uname]', '$_POST[pass]', 9, '$_POST[roll]')")) {
       $s = 0;
     }
   } if ($_POST["type"] == "pr") {
 
-    if (TRUE === $mysqli->query("INSERT INTO users values ('-pr', '$_POST[uname]', '$_POST[pass]', 0)")) {
-    $msg = "<span class='color'>Proofreader signup was successful!</span> ";
+    if (TRUE === $mysqli->query("INSERT INTO users values ('-pr', '$_POST[uname]', '$_POST[pass]', 0, '$_POST[roll]')")) {
     $s = 1;
     }
   }
