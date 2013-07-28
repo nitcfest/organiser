@@ -41,13 +41,18 @@ else
 		}
 		$res = $mysqli->query("select eventcode, validate from users where username='$user' and password='$pass'");
 		if ($res->num_rows == 0)
-			$msg = "<span class='color'>Invalid Username or Password!</span>";
-		else 
+		{
+			$msg = "Invalid Username or Password!";
+			echo $msg;
+			//header("Location:login.php");
+		}
+		else
 		{
 			$row = $res->fetch_assoc();
 			if ($row['validate'] == 0)
 			{
 				$msg = "<span class='color'>Your account needs to be validated!.</span>";
+				echo $msg;
 				$erlist = $row['eventcode'];
 				if ($erlist == '-pr') $erlist = '';
 			} 
@@ -79,5 +84,4 @@ else
 			}
 		}
 	}
-}
-	?>
+}?>

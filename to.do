@@ -4,10 +4,9 @@ Reg soft
 
 CMS
 	general
-		1* Login page - signup
+		1* Invalid username
 		2. add roll number and other credentials for users
 		3. multiple priveleges for users
-		4* wrong login not working
 
 	admin account
 		*1. add warning before deleting account

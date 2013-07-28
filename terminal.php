@@ -1,8 +1,7 @@
 <?php
 require_once("initdb.php");
-if (!isset($_SESSION['type']) || $_SESSION['type'] != "AD")
+if (!$_SESSION['type'] = "AD")
     _exit("You do not have access to this page");
-else $level=2;
 ?>
 <html>
 <head>

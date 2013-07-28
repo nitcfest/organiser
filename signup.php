@@ -26,7 +26,7 @@ if (isset($_POST["signup"])) {
     if (TRUE === $mysqli->query("INSERT INTO users values ('-nu', '$_POST[uname]', '$_POST[pass]', 9, '$_POST[roll]')")) {
       $s = 0;
     }
-  } if ($_POST["type"] == "pr") {
+  } else  if ($_POST["type"] == "pr") {
 
     if (TRUE === $mysqli->query("INSERT INTO users values ('-pr', '$_POST[uname]', '$_POST[pass]', 0, '$_POST[roll]')")) {
     $s = 1;
@@ -34,7 +34,9 @@ if (isset($_POST["signup"])) {
   }
   if ($s == 1)
     $msg .= "<span class='color'>Please wait till an administrator validates your account.</span>";
+  echo $msg;
   else
     $msg = "<span class='color'>Signup failed</span>";
+  echo $msg;
 }
 ?>

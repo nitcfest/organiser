@@ -1,5 +1,4 @@
-<?php
-require_once("initdb.php");?>
+<?php require_once("signin.php");?>
 <html>
 <head>
   <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
@@ -20,6 +19,10 @@ require_once("initdb.php");?>
 <body>
   <noscript><div style="background-color: #FF7777; padding: 20px; font-size: 20px">Please enable Javascript</div></noscript>
   <div style="color:white; position:absolute; margin:8% auto; text-align:center; font-family:Tathva_Cafe; font-size:150%; width:100%">O r g a n i s e r</div>
+  <?php 
+  if($msg!="")
+    echo "<div style=\"color:white; position:absolute; margin:10% auto; text-align:center; font-family:Arial; font-size:100%; width:100%\">".$msg."</div>";
+  ?>
   <div id="wrapper">
     <div id="info">
       <p>
@@ -31,7 +34,7 @@ require_once("initdb.php");?>
       </p>
     </div>
   <div id="supwrap">
-  <form action="signup.php" method="post" id="supform">
+  <form action="login.php" method="post" id="supform">
     <h3>Not yet a member?</h3>
     <input type="text" name="uname" placeholder="Username"><br/>
     <input type="text" name="roll" placeholder="Roll"><br/>
@@ -42,9 +45,10 @@ require_once("initdb.php");?>
       <option value="mk">Marketing Manager</option>
       <option value="pr">Proofreader</option>
       <option value="mn">Event Manager</option>
+    </select>
       <div id="mn_opts">
         <select name="category">
-          <option value="">--Event Category--</option>
+          <option value="">--Event Category--</option></br>
           <?php
           $res1 = $mysqli->query("select cat_id, name from event_cats where par_cat=-1");
           while($row=$res1->fetch_assoc()) {
@@ -65,13 +69,12 @@ require_once("initdb.php");?>
         <input type="text" placeholder="Event Code (3 letters)" name="ecode" onchange="javascript:this.value=this.value.toUpperCase();"><br/>
         </select><br/>
       </div>
-    </select>
     </br><input type="submit" name="signup" value="Sign Up">
   </form>
   </div>
 
   <div id="sinwrap">
-  <form action="signin.php" method="post" id="sinform">
+  <form action="login.php" method="post" id="sinform">
     <h3>Login</h3>
     <input type="text" placeholder="Username" name="username"><br/>
     <input type="password" placeholder="Password" name="password"><br/>
